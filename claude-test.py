@@ -1,7 +1,11 @@
 import anthropic
+import os
+from dotenv import load_dotenv, dotenv_values
+
+load_dotenv() 
 
 # Replace with your API key from Anthropic
-API_KEY = "API_KEY"
+API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 # Initialize the client
 client = anthropic.Client(api_key=API_KEY)
